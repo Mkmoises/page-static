@@ -8,7 +8,7 @@
     flex-direction: column;
 }
 .contenedor .hero{
-    background-image: url(../images/banner1.jpg);
+    background-image: url(../images/banner-e.png);
     background-size: cover;
     height: 700px;
     display: grid;
@@ -16,7 +16,7 @@
     grid-gap: 20px;
 }
 .contenedor .hero-2{
-    background-image: url(../images/banner1.jpg);
+    background-image: url(../images/banner-e.png);
     background-size: cover;
     height: 400px;
     display: grid;
@@ -287,8 +287,11 @@ h5 a{
     text-decoration: none;
     font-family:'Montserrat', system-ui;
     color: #e4f9f5;}
-a{
+.footer a{
     text-decoration: none;
+}
+.footer a:hover{
+    color: #737070;
 }
 h2{
     font-size: 28px;
@@ -329,6 +332,7 @@ h2{
     grid-template-columns: repeat(3, 1fr);
     grid-gap: 20px;
 }
+
 .articulos .articulo{
     background: #e4f9f5;
     border-radius: 2px;
@@ -342,7 +346,10 @@ h2{
     border: 2px #fb383b solid;
 }
 .descripcion{
+    font-size: 16px;
+    font-weight: 300;
     margin: 5px 0 20px;
+    padding: 5px;
 }
 .categorias{
     margin: 20px 0 0;
@@ -350,19 +357,30 @@ h2{
     border: 1px #000000 solid;
     background: #fb383b;
     color: #fff;
+    text-align: left;
+}
+.categorias li{
+   display: disc;
+   margin: 20px;
+   font-size: 18px;
+    
+}
+.categorias li:hover{
+    font-weight: bold;
 }
 .categorias .buscar{
     border-radius: 5px;
     height: 20px;
+    margin: 10px;
 }
-.contenedor-articulos .categorias h3{
+/* .contenedor-articulos .categorias h3{
     border: 1px solid #eeeeee;
     color: #eeeeee;
     font-size: 18px;
     text-align: left;
     padding: 20px; 
 
-}
+} */
 .contenedor-articulos .categorias h4{
     text-align: center;
     margin-top: 20px;
@@ -370,16 +388,7 @@ h2{
     font-size: 22px;
     text-align: center;
 }
-.categorias h3:hover{
-    border-bottom: 1px solid #fff;
-    color: #fff;
-    font-size: 20px;
-    /* text-align: center;
-    padding: 20px; */
-    transform: translateX(20px);
-    /* transform: translate(50px); */
-    transition: all 0.5s ease;
-}
+
 .categorias h2{
     margin: 10px;
     font-size: 22px;
