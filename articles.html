@@ -8,7 +8,7 @@
     <link href="//fonts.googleapis.com/css?family=Montserrat:100i,200,200i,300,300i,400,400i,500,500i,600,600i,700,700i,800"
     rel="stylesheet">
     <link href="//fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i,800" rel="stylesheet">
-    <link rel="icon" type="image/png" href="/images/bike.ico" />
+    <link rel="icon" type="image/png" href="images/bike.ico" />
     <title>Artículos</title>
 </head>
 <body>
@@ -20,7 +20,7 @@
                 <div>
                     <nav>
                         <ul class="menu">
-                            <a href="index.html" class="active">Inicio</a>
+                            <a href="index.html">Inicio</a>
                             <a href="about.html">Acerca de</a>
                             <a href="#"class="active">Artículos</a>
                             <a href="contact.html">Contactos</a>
@@ -33,21 +33,25 @@
                     <div class="contenedor-articulos">
                         <aside class="categorias">
                             <h2>Buscar</h2>
-                            <form action="POST">
-                                <input class='buscar'type="text" placeholder="Buscar...">
+                            <form action="">
+                                <input class='buscar' id="barra-busqueda" type="text" placeholder="Buscar">
                             </form>
                             <h4>Categorías</h4>
                             <br><br>
-                            <ul type="disc">
-                                <li>Accesorios</li>
-                                <li>Bicicleta</li>
-                                <li>Patinetas</li>
-                                <li>Motos</li>
-                                <li>Repuestos</li>
-                            </ul>
+                            <div class="categoria" id="categoria">
+                                    <a href="#" class="activo">Todos</a> <br>
+                                    <a href="#">Bicicletas</a> <br>
+                                    <a href="#">Motos</a><br>
+                                    <a href="#">Patinetas</a><br>
+                                    <a href="#">Accesorios</a><br>
+                                    <a href="#">Repuestos</a><br>
+                            </div>
                         </aside>
-                    <div class="articulos">
-                        <div class="articulo">
+                    <div class="articulos grid" id="grid">
+                        <div class="item"
+                        data-categoria="bicicletas"
+                        data-etiquetas="bicicletas greco cronos 20">
+                            <div class="articulo item-contenido">
                             <img src="images/7.png" alt="">
                             <h3>Greco Cronos rin 20</h3>
                             <h4 class="descripcion">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Ut, maxime!</h4>
@@ -55,7 +59,11 @@
                             <a href="#" class="action-header-2">Detalles</a>
                         
                         </div>
-                        <div class="articulo">
+                        </div>
+                        <div class="item" 
+                        data-categoria="bicicletas"
+                        data-etiquetas="bicicletas greco elevation 20">
+                            <div class="articulo item-contenido">
                             <img src="images/8.png" alt="">
                             <h3>Greco elevation rin 20</h3>
                             <h4 class="descripcion">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Ut, maxime!</h4>
@@ -63,7 +71,12 @@
                             <a href="#" class="action-header-2">Detalles</a>
                         
                         </div>
-                        <div class="articulo">
+                        </div>
+
+                        <div class="item"
+                        data-categoria="bicicletas"
+                        data-etiquetas="bicicletas inremo 24">
+                            <div class="articulo item-contenido">
                             <img src="images/9.png" alt="">
                             <h3>Imremo rin 24</h3>
                             <h4 class="descripcion">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Ut, maxime!</h4>
@@ -71,7 +84,12 @@
                             <a href="#" class="action-header-2">Detalles</a>
                         
                         </div>
-                        <div class="articulo">
+                        </div>
+                        
+                        <div class="item"
+                        data-categoria="bicicletas"
+                        data-etiquetas="bicicletas kamikaze 20">
+                            <div class="articulo item-contenido">
                             <img src="images/10.png" alt="">
                             <h3>Kamikaze rin 20</h3>
                             <h4 class="descripcion">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Ut, maxime!</h4>
@@ -79,7 +97,12 @@
                             <a href="#" class="action-header-2">Detalles</a>
                         
                         </div>
-                        <div class="articulo">
+                        </div>
+
+                        <div class="item"
+                        data-categoria="bicicletas"
+                        data-etiquetas="bicicletas titan 26">
+                            <div class="articulo item-contenido">
                             <img src="images/20.png" alt="">
                             <h3>Greco titan rin 26</h3>
                             <h4 class="descripcion">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Ut, maxime!</h4>
@@ -87,15 +110,24 @@
                             <a href="#" class="action-header-2">Detalles</a>
                         
                         </div>
-                        <div class="articulo">
+                        </div>
+                        
+                        <div class="item"
+                        data-categoria="bicicletas"
+                        data-etiquetas="bicicletas greco motobike 20">
+                            <div class="articulo item-contenido">
                             <img src="images/11.png" alt="">
                             <h3>Greco motobike rin 20</h3>
                             <h4 class="descripcion">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Ut, maxime!</h4>
                             <a href="#" class="action-header-1">Comprar</a>
                             <a href="#" class="action-header-2">Detalles</a>
-                        
                         </div>
-                        <div class="articulo">
+                        </div>
+
+                        <div class="item"
+                        data-categoria="motos"
+                        data-etiquetas="motos electrica">
+                        <div class="articulo item-contenido">
                             <img src="images/12.png" alt="">
                             <h3>Moto electrica</h3>
                             <h4 class="descripcion">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Ut, maxime!</h4>
@@ -103,7 +135,12 @@
                             <a href="#" class="action-header-2">Detalles</a>
                         
                         </div>
-                        <div class="articulo">
+                        </div>
+                        
+                        <div class="item"
+                        data-categoria="patinetas"
+                        data-etiquetas="patinetas batle force">
+                            <div class="articulo item-contenido">
                             <img src="images/13.png" alt="">
                             <h3>Patineta batle force 5</h3>
                             <h4 class="descripcion">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Ut, maxime!</h4>
@@ -111,7 +148,11 @@
                             <a href="#" class="action-header-2">Detalles</a>
                         
                         </div>
-                        <div class="articulo">
+                        </div>
+                        <div class="item"
+                        data-categoria="patinetas"
+                        data-etiquetas="patinetas batle force">
+                            <div class="articulo item-contenido">
                             <img src="images/14.png" alt="">
                             <h3>Patineta batle force 5</h3>
                             <h4 class="descripcion">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Ut, maxime!</h4>
@@ -119,7 +160,12 @@
                             <a href="#" class="action-header-2">Detalles</a>
                         
                         </div>
-                        <div class="articulo">
+                        </div>
+                        
+                        <div class="item"
+                        data-categoria="accesorios"
+                        data-etiquetas="accesorios kit protectores">
+                            <div class="articulo item-contenido">
                             <img src="images/15.png" alt="">
                             <h3>Kit de protectores</h3>
                             <h4 class="descripcion">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Ut, maxime!</h4>
@@ -127,7 +173,12 @@
                             <a href="#" class="action-header-2">Detalles</a>
                         
                         </div>
-                        <div class="articulo">
+                        </div>
+                        
+                        <div class="item"
+                        data-categoria="accesorios"
+                        data-etiquetas="accesorios kit protectores">
+                            <div class="articulo item-contenido">
                             <img src="images/16.png" alt="">
                             <h3>Kit de protectores</h3>
                             <h4 class="descripcion">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Ut, maxime!</h4>
@@ -135,7 +186,12 @@
                             <a href="#" class="action-header-2">Detalles</a>
                         
                         </div>
-                        <div class="articulo">
+                        </div>
+                        
+                        <div class="item"
+                        data-categoria="accesorios"
+                        data-etiquetas="accesorios kit protectores">
+                            <div class="articulo item-contenido">
                             <img src="images/17.png" alt="">
                             <h3>Kit de protectores</h3>
                             <h4 class="descripcion">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Ut, maxime!</h4>
@@ -143,15 +199,12 @@
                             <a href="#" class="action-header-2">Detalles</a>
                         
                         </div>
-                        <div class="articulo">
-                            <img src="images/18.png" alt="">
-                            <h3>Patineta</h3>
-                            <h4 class="descripcion">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Ut, maxime!</h4>
-                            <a href="#" class="action-header-1">Comprar</a>
-                            <a href="#" class="action-header-2">Detalles</a>
-                        
                         </div>
-                        <div class="articulo">
+                       
+                        <div class="item"
+                        data-categoria="bicicletas"
+                        data-etiquetas="bicicletas greco titan 20">
+                            <div class="articulo item-contenido">
                             <img src="images/19.png" alt="">
                             <h3>Greco titan rin 20</h3>
                             <h4 class="descripcion">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Ut, maxime!</h4>
@@ -159,7 +212,12 @@
                             <a href="#" class="action-header-2">Detalles</a>
                         
                         </div>
-                        <div class="articulo">
+                        </div>
+                        
+                        <div class="item"
+                        data-categoria="bicicletas"
+                        data-etiquetas="bicicletas boscan 20">
+                            <div class="articulo item-contenido">
                             <img src="images/boscan.png" alt="">
                             <h3>Boscan rin 20</h3>
                             <h4 class="descripcion">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Ut, maxime!</h4>
@@ -167,6 +225,8 @@
                             <a href="#" class="action-header-2">Detalles</a>
                         
                         </div>
+                        </div>
+                        
                     </div>
                     <!-- HACER NUMERACION DE PAGINA CON SLIDER  -->
             </div>
@@ -194,5 +254,8 @@
    </div>
         <p class="pie">&copy 2019 Inversiones Massaguer. All rights reserved | Design by <a href="https://mkmoises.github.io/Portafolio/"> MABG</a></p>
 </div>
+<script src="https://unpkg.com/web-animations-js@2.3.2/web-animations.min.js"></script>
+<script src="https://unpkg.com/muuri@0.8.0/dist/muuri.min.js"></script>
+<script src="main.js"></script>
 </body>
 </html>
