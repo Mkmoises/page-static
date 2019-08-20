@@ -15,7 +15,7 @@
     width: 100%;
 }
 .contenedor .hero{
-    background-image: url(../images/banner-e.png);
+    background-image: url(../images/bike.jpg);
     background-size: cover;
     height: 700px;
     display: grid;
@@ -24,7 +24,7 @@
     grid-area: hero;
 }
 .contenedor .hero-2{
-    background-image: url(../images/banner-e.png);
+    background-image: url(../images/bike.jpg);
     background-size: cover;
     height: 400px;
     display: grid;
@@ -91,7 +91,7 @@ span{
     font-size:22px;
     font-weight: 400;
     padding:20px;
-    color:#fff;
+    color:#000;
     text-decoration: none;
     cursor: pointer;
 }
