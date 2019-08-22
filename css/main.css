@@ -342,12 +342,12 @@ h2{
     background: #fff;
     margin: 20px;
     display: grid;
-    grid-template-columns: 200px 1fr;
+    grid-template-columns: .2fr 1fr;
 }
 .contenedor-articulos .grid{
     position: relative;
 	width: 100%;
-	opacity: 0;
+	opacity: 0s;
 	transition: opacity 0.5s linear 1s;
 }
 .contenedor-articulos .grid.imagenes-cargadas {
@@ -357,12 +357,6 @@ h2{
 .contenedor-articulos .grid .item-contenido {
 	position: relative;
 }
-/* .contenedor-articulos .articulos{
-    margin: 20px;
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    grid-gap: 20px;
-} */
 .contenedor-articulos .grid .item{
     position: absolute;
 	display: block;
@@ -420,9 +414,11 @@ header .categorias a.activo {
 
 }
 .categorias .categoria a{
-   font-size: 18px;
+   font-size: 20px;
    color: #fff;
    margin: 10px;
+   display: flex;
+   flex-direction: column;
    text-decoration: none;
    cursor: pointer;
     
@@ -503,4 +499,104 @@ header .categorias a.activo {
     cursor: pointer;
 }
 
+/* //////////Mediaqueri//////////////7 */
 
+@media screen and (max-width: 320px){
+    .otros-articulos{
+        display: none;
+    }
+}
+
+@media screen and (max-width: 480px){
+.contenedor{
+    display: flex;
+    flex-wrap: wrap;    
+}
+.otros-articulos{
+    display: none;
+}
+.list-articles .contenedor-articulos{
+    display: flex;
+    flex-wrap: wrap;
+}
+.contenedor-articulos .grid .item{
+    width: calc(100% - 20px);
+ }
+.categorias{
+    margin: auto;
+    flex-direction: row;
+    padding: 0 15px 0 0;
+    width: 500px;
+    align-items: center;
+    justify-content: center;
+}
+.categorias .buscar{
+    width: 300px;
+}
+.categorias h4{
+    display: none;
+}
+
+.categorias .categoria a{
+    /* padding: 10px 5px 0 5px;
+    display: inline-block;
+    flex-wrap: wrap; */
+    display: none;
+}
+ /* .categorias{
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-area: "buscar"
+                "categorias" 
+
+ }
+ .categorias .categoria a{
+     grid-area: categorias;
+ }
+ .categorias .buscar{
+     grid-area: buscar;
+ } */
+
+}
+@media screen and (max-width: 768px){
+.contenedor{
+    display: flex;
+    flex-wrap: wrap;
+}
+.otros-articulos{
+    display: none;
+}
+
+.contenedor .hero{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.contenedor .hero-2{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.list-articles{
+    display: flex;
+    flex-wrap: wrap;
+}
+.contenedor-articulos .grid .item{
+   width: calc(50% - 20px);
+}
+}
+@media screen and (max-width: 1024px){
+    .list-articles{
+        display: flex;
+        flex-wrap: wrap;
+        flex-direction: column;
+    }
+
+    .contenedor{
+        display: flex;
+        flex-wrap: wrap;
+    }
+    .menu a{
+        padding: 7px;
+    }
+}
